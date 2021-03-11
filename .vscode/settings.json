@@ -1,0 +1,15 @@
+{
+    "python.pythonPath": "venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "autoDocstring.docstringFormat": "default",
+    "cSpell.words": [
+        "nenvs",
+        "obses"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": false,
+    "python.linting.pylamaEnabled": false,
+    "editor.fontFamily": "'Space Mono'",
+    "editor.fontLigatures":true
+}

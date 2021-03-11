@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "test_paralell.py", line 278, in <module>
+    play(args) #, nn_path=os.path.join(settings.models_dir,"rl39699.pth"))
+  File "test_paralell.py", line 72, in play
+    nn = ActorCritic(map_size)
+  File "/seu_share/home/weiweiwu/uRTS/microrts/microrts/algo/model.py", line 369, in __init__
+    init_(nn.Linear(self.conv_flatten_size + unit_feature_size, hidden_size)), nn.ReLU(),
+  File "/seu_share/home/weiweiwu/uRTS/microrts/microrts/algo/model.py", line 248, in <lambda>
+    init_ = lambda m: init(m, nn.init.orthogonal_, lambda x: nn.init.
+  File "/seu_share/home/weiweiwu/uRTS/microrts/microrts/algo/model.py", line 16, in init
+    weight_init(module.weight.data, gain=gain)
+  File "/seu_share/home/weiweiwu/anaconda3/lib/python3.8/site-packages/torch/nn/init.py", line 442, in orthogonal_
+    q, r = torch.qr(flattened)
+KeyboardInterrupt
