@@ -12,5 +12,6 @@ PATH=/seu_share/home/weiweiwu/anaconda3/bin:$PATH
 LD_LIBRARY_PATH=/seu_share/home/weiweiwu/anaconda3/lib:$LD_LIBRARY_PATH
 export JAVA_HOME  CLASSPATH PATH 
 cd ~/uRTS/microrts
+CUDA_VISIBLE_DEVICES=3
 python3 test.py  --algo ppo -lr 1e-4 --env-id  fullgame-v0 --render 0 --saving-prefix rl_four_ppo_v1
 

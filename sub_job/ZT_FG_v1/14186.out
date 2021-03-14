@@ -1,0 +1,62 @@
+Sender: LSF System <lsfadmin@gpu12>
+Subject: Job 14186: <PPO_League_Six_Copy> in cluster <cluster1> Exited
+
+Job <PPO_League_Six_Copy> was submitted from host <login01> by user <weiweiwu> in cluster <cluster1> at Fri Mar 12 12:40:34 2021
+Job was executed on host(s) <2*gpu12>, in queue <gpu_v100>, as user <weiweiwu> in cluster <cluster1> at Fri Mar 12 15:21:17 2021
+                            <4*gpu11>
+                            <4*gpu20>
+                            <4*gpu22>
+                            <2*gpu19>
+</seu_share/home/weiweiwu> was used as the home directory.
+</seu_share/home/weiweiwu/uRTS/microrts/sub_job/ZT_FG_v1> was used as the working directory.
+Started at Fri Mar 12 15:21:17 2021
+Terminated at Fri Mar 12 15:21:59 2021
+Results reported at Fri Mar 12 15:21:59 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J PPO_League_Six_Copy
+#BSUB -o %J.out
+#BSUB -e %J.err
+#BSUB -q gpu_v100
+#BSUB -gpu num=1
+JAVA_HOME=/seu_share/home/weiweiwu/wlocal/jdk/jdk-11.0.1
+#JRE_HOME=${JAVA_HOME}/jre
+CLASSPATH=.:${JAVA_HOME}/lib
+PATH=$JAVA_HOME/bin:$PATH
+PATH=/seu_share/home/weiweiwu/anaconda3/bin:$PATH
+LD_LIBRARY_PATH=/seu_share/home/weiweiwu/anaconda3/lib:$LD_LIBRARY_PATH
+export JAVA_HOME  CLASSPATH PATH 
+cd ~/uRTS/microrts
+python3 test_paralell.py  --algo ppo -lr 1e-4 --env-id  fullgame-v1 --render 0 --saving-prefix PPO_League_Six_Copy --league Random,WorkerRush,NaiveMCTS,UCT,MCTS,Passive --num-process 16
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   136.12 sec.
+    Max Memory :                                 1479 MB
+    Average Memory :                             665.25 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                53
+    Run time :                                   42 sec.
+    Turnaround time :                            9685 sec.
+
+The output (if any) follows:
+
+Random,WorkerRush,NaiveMCTS,UCT,MCTS,Passive
+cuda:0
+
+
+PS:
+
+Read file <14186.err> for stderr output of this job.
+

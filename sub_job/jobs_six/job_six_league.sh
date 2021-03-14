@@ -1,5 +1,5 @@
 #!/bin/bash
-#BSUB -J rl_six_ppo_league_MCTS
+#BSUB -J PPO_League_Six
 #BSUB -o %J.out
 #BSUB -e %J.err
 #BSUB -q gpu_v100
@@ -12,5 +12,4 @@ PATH=/seu_share/home/weiweiwu/anaconda3/bin:$PATH
 LD_LIBRARY_PATH=/seu_share/home/weiweiwu/anaconda3/lib:$LD_LIBRARY_PATH
 export JAVA_HOME  CLASSPATH PATH 
 cd ~/uRTS/microrts
-python3 test_paralell.py  --algo ppo -lr 1e-4 --env-id  fullgame-v1 --render 0 --saving-prefix rl_six_ppo_league_MCTS --league NaiveMCTS,NaiveMCTS,NavieMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS --num-process 28
-
+python3 test_paralell.py  --algo ppo -lr 1e-4 --env-id  fullgame-v1 --render 0 --saving-prefix PPO_League_Six --league NaiveMCTS,NaiveMCTS,NavieMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS --num-process 16
