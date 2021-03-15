@@ -1,0 +1,1012 @@
+Sender: LSF System <lsfadmin@c01n14>
+Subject: Job 13706: <rl_six_ppo_league_MCTS_normal> in cluster <cluster1> Exited
+
+Job <rl_six_ppo_league_MCTS_normal> was submitted from host <login01> by user <weiweiwu> in cluster <cluster1> at Thu Mar 11 16:38:07 2021
+Job was executed on host(s) <28*c01n14>, in queue <normal>, as user <weiweiwu> in cluster <cluster1> at Thu Mar 11 17:45:22 2021
+</seu_share/home/weiweiwu> was used as the home directory.
+</seu_share/home/weiweiwu/uRTS/microrts/sub_job> was used as the working directory.
+Started at Thu Mar 11 17:45:22 2021
+Terminated at Mon Mar 15 08:52:43 2021
+Results reported at Mon Mar 15 08:52:43 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J rl_six_ppo_league_MCTS_normal
+#BSUB -o %J.out
+#BSUB -e %J.err
+#BSUB -q normal
+#BSUB mpirun
+#BSUB -n 28
+module load imkl2015   #加载mpirun环境变量             |
+mpirun vasp_std 
+JAVA_HOME=/seu_share/home/weiweiwu/wlocal/jdk/jdk-11.0.1
+#JRE_HOME=${JAVA_HOME}/jre
+CLASSPATH=.:${JAVA_HOME}/lib
+PATH=$JAVA_HOME/bin:$PATH
+PATH=/seu_share/home/weiweiwu/anaconda3/bin:$PATH
+LD_LIBRARY_PATH=/seu_share/home/weiweiwu/anaconda3/lib:$LD_LIBRARY_PATH
+export JAVA_HOME  CLASSPATH PATH 
+cd ~/uRTS/microrts
+python3 test_paralell.py  --algo ppo -lr 1e-4 --env-id  fullgame-v1 --render 0 --saving-prefix rl_six_ppo_league_MCTS --league NaiveMCTS,NaiveMCTS,NavieMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS --num-process 28
+
+
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   495561.53 sec.
+    Max Memory :                                 39759 MB
+    Average Memory :                             38739.54 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   17592186044415 MB
+    Max Processes :                              60
+    Max Threads :                                1123
+    Run time :                                   313640 sec.
+    Turnaround time :                            317676 sec.
+
+The output (if any) follows:
+
+NaiveMCTS,NaiveMCTS,NavieMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS,NaiveMCTS
+cpu
+league learning staring
+NaiveMCTS
+NaiveMCTS
+NavieMCTS
+NaiveMCTS
+NaiveMCTS
+NaiveMCTS
+NaiveMCTS
+NaiveMCTS
+NaiveMCTS
+NaiveMCTS
+All leagues participated are ['NaiveMCTS', 'NaiveMCTS', 'NavieMCTS', 'NaiveMCTS', 'NaiveMCTS', 'NaiveMCTS', 'NaiveMCTS', 'NaiveMCTS', 'NaiveMCTS', 'NaiveMCTS', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI', 'socketAI']
+28 28
+fps 106.69836059328736
+fps 121.7645054787381
+fps 107.10693417209711
+fps 132.12273123553794
+fps 118.95627847594031
+fps 122.63380250467945
+fps 111.93419248240107
+fps 124.52192996045625
+fps 116.13089277362612
+fps 127.09750333367592
+fps 117.64393070880826
+fps 124.07959181728158
+fps 119.5818816151274
+fps 132.53057904362876
+fps 122.26315742521672
+fps 122.65503568346226
+fps 114.4095661091943
+fps 116.40366405578007
+fps 122.83509373119814
+fps 119.59622608177304
+fps 123.54535837073182
+fps 113.64609493229354
+fps 113.75306852867695
+fps 116.48718876824948
+fps 118.7088588201141
+fps 117.22468108225773
+fps 124.22390491192337
+fps 120.39439954882067
+fps 111.18017187756712
+fps 112.71011004598058
+fps 121.66911150687795
+fps 124.41998888501249
+fps 128.36407390293243
+fps 113.07717141203851
+fps 125.18716566903285
+fps 113.51128526133833
+fps 124.21481972228321
+fps 116.69688537092593
+fps 119.15092266073844
+fps 122.72670603169212
+fps 119.30520753501423
+fps 117.85407018205375
+fps 124.20306824617282
+fps 119.86058837330417
+fps 123.67242563241632
+fps 122.70614214712998
+fps 121.87057074100281
+fps 115.99279273074914
+fps 121.24970585408
+fps 127.64707594681181
+fps 130.63902480057277
+fps 129.13467604691118
+fps 133.48019500503125
+fps 129.17207313889756
+fps 135.65392681978682
+fps 127.49912212557976
+fps 126.81301626880159
+fps 125.20376533458654
+fps 123.64749794240574
+fps 128.31342771069657
+fps 125.8985116175395
+fps 124.4255134657484
+fps 121.32136756700517
+fps 129.5440097540831
+fps 117.07305888762647
+fps 117.34876955340454
+fps 120.26372371995004
+fps 132.85215301744725
+fps 126.28489074001257
+fps 119.03240508196056
+fps 125.94638377502012
+fps 128.99628025513886
+fps 126.79430035804431
+fps 131.32036932163174
+fps 123.25226551663064
+fps 133.92768792356392
+fps 125.54049187275041
+fps 126.16181700206815
+fps 128.2144334079102
+fps 130.44462787251683
+fps 136.42737752826918
+fps 132.20924444344777
+fps 131.61568883999198
+fps 128.66401659899688
+fps 127.62303283248387
+fps 129.28451788308794
+fps 124.70309915889878
+fps 129.75318988137022
+fps 119.58805601290722
+fps 126.07015275963522
+fps 132.3894059442591
+fps 137.18016886475766
+fps 136.93783821270026
+fps 127.86358554831696
+fps 123.62326023270101
+fps 135.4828270001229
+fps 128.62732358718728
+fps 130.07276461793893
+fps 122.3136953545613
+fps 120.8551154502665
+fps 124.54178560444595
+fps 126.25698336274561
+fps 129.7069716475425
+fps 143.5366476717446
+fps 137.14645800911228
+fps 133.60973940035663
+fps 124.16107747257578
+fps 128.26062851490158
+fps 124.10319728904764
+fps 121.80457655219767
+fps 129.09033101488777
+fps 130.85504525583735
+fps 124.1246714856296
+fps 126.22282626058622
+fps 126.65356486688911
+fps 128.39018186892864
+fps 128.2689285115969
+fps 126.2451429236596
+fps 121.20967058264637
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 52841 --port2 43442
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+52841
+--port2
+43442
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 48499 --port2 53809
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+48499
+--port2
+53809
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 34490
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+34490
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 37733 --port2 51132
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+37733
+--port2
+51132
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 52650 --port2 59161
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+52650
+--port2
+59161
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 60425
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+60425
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 48164
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+48164
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NavieMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 55109
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NavieMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+55109
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 34077 --port2 52497
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+34077
+--port2
+52497
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 45728
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+45728
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 53808 --port2 60134
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+53808
+--port2
+60134
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 50611
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+50611
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 50428 --port2 40383
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+50428
+--port2
+40383
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 37309 --port2 37679
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+37309
+--port2
+37679
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 50629 --port2 46587
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+50629
+--port2
+46587
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 44366 --port2 48030
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+44366
+--port2
+48030
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 39545 --port2 41460
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+39545
+--port2
+41460
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 53035 --port2 53125
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+53035
+--port2
+53125
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 42932
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+42932
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 54044 --port2 44559
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+54044
+--port2
+44559
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 39696 --port2 49039
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+39696
+--port2
+49039
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 42012 --port2 41776
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+42012
+--port2
+41776
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 52947 --port2 37678
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+52947
+--port2
+37678
+GymSocketAI: welcome message received
+client request for connecting to server...
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 44816
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+ParallelVecEnv worker: got KeyboardInterrupt
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+44816
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 50961 --port2 57584
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+50961
+--port2
+57584
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 36276
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+36276
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type NaiveMCTS --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 46864
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+NaiveMCTS
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+46864
+GymSocketAI: welcome message received
+
+java -jar /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/microrts-java.jar --map /seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml --ai1_type socketAI --ai2_type socketAI --maxCycles 2000 --maxEpisodes 100000 --period 1 --render 0 --port1 47780 --port2 47461
+Player0 Wait for Java client connection...
+Player0: Send welcome msg to client...
+Client: ack!
+Player1 Wait for Java client connection...
+Player1: Send welcome msg to client...
+Client: ack!
+Server: Send reset command...
+Server: Send reset command...
+Client received info:
+--map
+/seu_share/home/weiweiwu/uRTS/microrts/microrts/rts_wrapper/maps/6x6/fullgame6x6.xml
+--ai1_type
+socketAI
+--ai2_type
+socketAI
+--maxCycles
+2000
+--maxEpisodes
+100000
+--period
+1
+--render
+0
+--port1
+47780
+--port2
+47461
+GymSocketAI: welcome message received
+GymSocketAI: welcome message received
+
+
+
+PS:
+
+Read file <13706.err> for stderr output of this job.
+
